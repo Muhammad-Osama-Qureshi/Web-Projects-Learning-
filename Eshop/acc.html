@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>E Shop </title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="header"><div class="container">
+        <div class="navbar">
+            <div class="logo">
+               <a href="index.html"> <img src="images/marianna-ole-ax0PeIbYZkU-unsplash.jpg" width="125px">
+            </div></a>
+        <nav>
+            <ul id="Menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="acc.html">Account</a></li>
+            </ul>
+        </nav>
+        <a href="cartpage.html"><img src="images/cart.png " width="30px" height="30px"></a>
+        <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+        </div>
+        
+        </div></div>
+<!--Account Page-->
+
+<div class="account-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-2">
+                <img src="images/image1.png" width="100%">
+            </div>
+            <div class="col-2">
+                <div class="form-container">
+                    <div class="form-btn">
+                        <span onclick="login()">login</span>
+                        <span onclick="register()">Register</span>
+                        <hr id="Indicator">
+                    </div>
+                    <form  id="Loginform">
+                        <input type="text" placeholder="Username">
+                        <input type="password" placeholder="Password">
+                        <button type="submit" class="btn">Login</button>
+                        <a href="">Forget Password</a>
+                    </form>
+                    <form id="Regform" >
+                        <input type="text" placeholder="Username">
+                        <input type="email" placeholder="Email">
+                        <input type="password" placeholder="Password">
+                        <button type="submit" class="btn">Register</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        
+<!---footer-->
+<div class="footer">
+    <div class="container">
+        <div class="row"><div class="footer-col-1"><h3>Download our app</h3>
+        <p>Download our app for android of IOS phone</p>
+    <div class="app-logo">
+        <img src="images/play-store.png" >
+        <img src="images/app-store.png" >
+    </div>
+    </div>
+        <div class="footer-col-2"><img src="images/logo-white.png">
+        <p>Our</p></div>
+        <div class="footer-col-3"><h3>Useful Links</h3>
+        <ul>
+            <li>Coupans</li>
+            <li>Blog Post</li>
+            <li>Return Policy</li>
+            <li>Join Affiliate</li>
+    
+        </ul>   
+     </div>
+     <div class="footer-col-4"><h3>Follow US</h3>
+        <ul>
+            <li>Facebook</li>
+            <li>Twitter</li>
+            <li>Instagram</li>
+            <li>Follow</li>
+    
+        </ul>   
+     </div>
+    </div>
+    <hr><p class="Copyright">Copyright 2020 Nothing</p>
+    </div>
+    
+    </div>
+
+</body>
+</html>
+<script>
+    var Menu=document.getElementById("Menu");
+    Menu.style.maxHeight="0px";
+    function menutoggle(){
+        if(Menu.style.maxHeight=="0px"){
+            Menu.style.maxHeight="200px";
+        }
+        else{
+            Menu.style.maxHeight="0px";
+        }
+    }
+    </script>
+  <!--Js For ToggleForm-->
+  <script>
+      var Loginform=document.getElementById("Loginform");
+      var Regform=document.getElementById("Regform");
+      var Indicator=document.getElementById("Indicator");
+      function register(){
+          Regform.style.transform="translateX(0px)";
+          Loginform.style.transform="translate(0px)";
+          Indicator.style.transform="translate(100px)";
+      }
+      function login(){
+          Regform.style.transform="translateX(300px)";
+          Loginform.style.transform="translate(300px)";
+          Indicator.style.transform="translate(0px)";
+      }
+  </script>
